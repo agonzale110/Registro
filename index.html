@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container mt-5">
+            <div class="row">
+                <form id="user-form">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 mb-3">
+                            <label class="form-label">Usuario</label>
+                            <input type="text" name="usuario" pattern="^(?!\s*$).+" class="form-control" required>
+                        </div>
+                        <div class="col-12 col-sm-6 mb-3">
+                            <label class="form-label">Correo</label>
+                            <input type="email" name="correo" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" name="nombre" pattern="^(?!\s*$).+" class="form-control" required>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label class="form-label">Apellido</label>
+                            <input type="text" name="apellido" pattern="^(?!\s*$).+" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <label class="form-label">Tipo ID</label>
+                            <select class="form-select" name="tipo_identificacion" aria-label="Default select example" required>
+                                <option selected>Cédula</option>
+                                <option value="1">Cédula de Extranjería</option>
+                                <option value="2">Pasaporte</option>
+                                <option value="3">Tarjeta de identidad</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label">Identificación</label>
+                            <input type="number" name="identificacion" pattern="^(?!\s*$).+" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label class="form-label">Ciudad</label>
+                            <input type="text" name="ciudad" pattern="^(?!\s*$).+" class="form-control" required>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label class="form-label">País</label>
+                            <input type="text" name="pais" pattern="^(?!\s*$).+" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label class="form-label">Dirección</label>
+                            <input type="text" name="direccion" pattern="^(?!\s*$).+" class="form-control" required>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label class="form-label">Teléfono</label>
+                            <input type="text" name="telefono" pattern="^(?!\s*$).+" class="form-control" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Agregar</button>
+                    
+                    <div class="alert alert-danger mt-3 d-none" id="error-msg" role="alert">
+                        This is a danger alert—check it out!
+                    </div>
+                </form>
+
+                <div class="table-responsive">
+                    <table class="table table-hover mt-5">
+                        <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Usuario</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Tipo ID</th>
+                            <th scope="col">Ciudad</th>
+                            <th scope="col">País</th>
+                            <th scope="col">Dirección</th>
+                            <th scope="col">Teléfono</th>
+                        </tr>
+                        </thead>
+                        <tbody id="user-list">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="./index.js" type="text/javascript" async defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    </body>
+</html>
